@@ -1,12 +1,13 @@
 
 import './App.css'
+import ShoppingList from './ShoppingList'
 
 function App() {
 
 
   return (
     <>
-      <h1 className='text-3xl text-blue-500'>radha</h1>
+      <ShoppingList />
     </>
   )
 }
