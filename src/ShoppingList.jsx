@@ -30,10 +30,10 @@ export function ShoppingList() {
         <>
             <div className="flex flex-row flex-wrap overflow-hidden">
 
-                <img src="https://img.freepik.com/free-vector/shopping-cart-with-bags-gifts-concept-illustration_114360-18775.jpg" className="w-1/4 md:1/4 lg:w-1/4 object-contain basis-1 lg:basis-1/2  self-start" alt="shopping-cart" />
+                <img src="https://img.freepik.com/free-vector/shopping-cart-with-bags-gifts-concept-illustration_114360-18775.jpg" className="w-1/4 md:w-1/4 lg:w-1/4 object-contain basis-1 lg:basis-1/2  self-start" alt="shopping-cart" />
 
                 <div className="basis-1/2 flex flex-col items-center gap-8">
-                    <h1 className="mt-4 text-3xl font-bold text-green-700">SHOPPING LIST! Add to Cart...</h1>
+                    <h1 className="mt-4 text-lg md:text-3xl font-bold text-green-700 text-center">SHOPPING LIST! Add to Cart...</h1>
                     <ValidatedShoppingListForm addData={addItem} />
                     <ul className="w-1/2 font-bold">
                         {items.map((i) =>
