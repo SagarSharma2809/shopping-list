@@ -2,10 +2,12 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 export function ValidatedShoppingListForm({ addData }) {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     const onSubmit = (data) => {
         addData(data);
+        reset();
+
     };
 
     const registerOptions = {
@@ -43,9 +45,9 @@ export function ValidatedShoppingListForm({ addData }) {
                     {...register("quantity", registerOptions.quantity)}
                 />
             </div>
-            {errors.quantity && <span className='text-red-600 mb-6'>{errors.quantity.message}</span>}
+            {errors.quantity && <span className='text-red-600 mb-1'>{errors.quantity.message}</span>}
 
-            <button type="submit" className='px-4 py-2 w-28 m-8 bg-green-500 text-white rounded hover:bg-green-600'>ADD</button>
+            <button type="submit" className='px-4 py-2 w-28 m-6 mb-2 bg-green-500 text-white rounded hover:bg-green-600'>ADD</button>
         </form>
     );
 }
